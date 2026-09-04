@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dice Game</title>
+
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    /* Taille du dé */
+    .dice {
+      font-size: 100px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      font-size: 35px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Dice Game</h1>
+
+    <div class="dice">🎲</div>
+
+    <p id="part1">-</p>
+
+    <h3>Click the button to roll the dice!</h3>
+
+    <button onclick="roll()">Roll Dice</button>
+  </div>
+
+  <script>
+    function roll() {
+      const element = document.querySelector("#part1");
+      const randomNumber = Math.floor(Math.random() * 6) + 1;
+
+      element.innerHTML = randomNumber;
+    }
+  </script>
+</body>
+</html>
